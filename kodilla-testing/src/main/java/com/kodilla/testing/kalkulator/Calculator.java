@@ -2,8 +2,8 @@ package com.kodilla.testing.kalkulator;
 
 public class Calculator {
 
-    int a;
-    int b;// zmienne do obliczen
+    private int a;
+    private int b;// zmienne do obliczen
 
     public Calculator(int a, int b) {//konstruktor, pobiera a i b
         this.a = a;
