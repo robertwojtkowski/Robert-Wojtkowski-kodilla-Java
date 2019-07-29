@@ -2,6 +2,10 @@ package com.kodilla.testing.forum;
 import com.kodilla.testing.user.SimpleUser;
 import org.junit.*;
 public class ForumTestSuite {
+
+    //wszystko ze strony skopiowane
+
+
     @Before
     public void before(){
         System.out.println("Test Case: begin");

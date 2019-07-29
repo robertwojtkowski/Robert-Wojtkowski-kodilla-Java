@@ -28,10 +28,13 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorEmptyList(){
         //Given
         ArrayList<Integer> pusta=new ArrayList<>();
+        //nowa pusta lista
         //When
         ArrayList wynik=OddNumbersExterminator.exterminate(pusta);
+        //przepuszczenie pustej listy przez metode
         //Then
         Assert.assertEquals(pusta,wynik);
+        //porownanie wyniku z oczekiwanymi rezultatami
 
     }
 
@@ -46,10 +49,18 @@ public class CollectionTestSuite {
         lista.add(5);
         lista.add(6);
         oczekiwana.add(6);
+        //stworzenie listy z róznymi liczbami i listy z samymi parzystymi
+
+
         //When
         ArrayList wynik=OddNumbersExterminator.exterminate(lista);
+        //przepuszczenie przez metodę
+
+
+
         //Then
         Assert.assertEquals(oczekiwana,wynik);
+        //porównanie listy oczekiwanej i wynikowej
 
     }
 
