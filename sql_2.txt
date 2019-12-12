@@ -1,0 +1,24 @@
+INSERT INTO USERS (FIRSTNAME, LASTNAME)
+VALUES ("Grzegorz", "XYZ");
+
+INSERT INTO USERS (FIRSTNAME, LASTNAME)
+VALUES ("Jan", "Niezbedny");
+
+
+
+INSERT INTO ISSUES (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (1, "SUMMARY Done 4", "DESCRIPTION 4", 2);
+
+INSERT INTO ISSUES (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (1, "SUMMARY Done 5", "DESCRIPTION 5", 3);
+
+
+select * from issues
+join issueslists on issueslists.id = issues.ISSUESLIST_ID
+
+select * from issues
+join users on users.id = issues.USER_ID_ASSIGNEDTO
+
+select users.FIRSTNAME, users.LASTNAME,  COUNT(*) as 'Number of posts' from issues
+join users on users.id = issues.USER_ID_ASSIGNEDTO
+group by users.FIRSTNAME
